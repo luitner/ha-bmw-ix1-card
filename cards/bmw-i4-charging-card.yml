@@ -127,29 +127,29 @@ cards:
           style:
             top: 18%
             left: 16%
-        # - type: state-icon
-        #   entity: sensor.i4_edrive40_charging_time_elapsed
-        #   style:
-        #     top: 9%
-        #     left: 38%
-        # - type: state-label
-        #   entity: sensor.i4_edrive40_charging_time_elapsed_formatted
-        #   suffix: ' ago'
-        #   style:
-        #     top: 18%
-        #     left: 38%
+        - type: state-icon
+          entity: sensor.i4_edrive40_charging_time_elapsed
+          style:
+            top: 9%
+            left: 38%
+        - type: state-label
+          entity: sensor.i4_edrive40_charging_time_elapsed_formatted
+          suffix: ' ago'
+          style:
+            top: 18%
+            left: 38%
         - type: state-icon
           entity: sensor.x5_xdrive50e_charging_end_time
           icon: mdi:clock-end
           style:
             top: 9%
             left: 62%
-        # - type: state-label
-        #   entity: sensor.i4_edrive40_charging_time_remaining_formatted
-        #   suffix: ' left'
-        #   style:
-        #     top: 18%
-        #     left: 62%
+        - type: state-label
+          entity: sensor.i4_edrive40_charging_time_remaining_formatted
+          suffix: ' left'
+          style:
+            top: 18%
+            left: 62%
         - type: conditional
           conditions:
             - entity: binary_sensor.x5_xdrive50e_charging_status
