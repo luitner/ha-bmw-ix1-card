@@ -2,11 +2,11 @@ type: vertical-stack
 cards:
   - type: conditional
     conditions:
-      - entity: binary_sensor.i4_edrive40_connection_status
+      - entity: binary_sensor.x5_xdrive50e_connection_status
         state_not: 'on'
     card:
       type: picture-elements
-      image: /local/images/bmw-i4-sideview-white.png
+      image: /local/images/2022-BMW-X5-color-Tanzanite-Blue-II.png
       card_mod:
         style:
           hui-image$: |
@@ -16,97 +16,97 @@ cards:
             }
       elements:
         - type: state-icon
-          entity: device_tracker.i4_edrive40
+          entity: device_tracker.x5_xdrive50e
           state_color: false
           style:
             top: 9%
             left: 16%
         - type: state-label
-          entity: device_tracker.i4_edrive40
+          entity: device_tracker.x5_xdrive50e
           style:
             top: 18%
             left: 16%
         - type: state-icon
-          entity: binary_sensor.i4_edrive40_door_lock_state
+          entity: binary_sensor.x5_xdrive50e_door_lock_state
           state_color: true
           style:
             top: 9%
             left: 38%
         - type: state-label
-          entity: binary_sensor.i4_edrive40_door_lock_state
+          entity: binary_sensor.x5_xdrive50e_door_lock_state
           style:
             top: 18%
             left: 38%
         - type: state-icon
-          entity: binary_sensor.i4_edrive40_lids
+          entity: binary_sensor.x5_xdrive50e_lids
           style:
             top: 9%
             left: 62%
         - type: state-label
-          entity: binary_sensor.i4_edrive40_lids
+          entity: binary_sensor.x5_xdrive50e_lids
           style:
             top: 18%
             left: 62%
         - type: state-icon
-          entity: binary_sensor.i4_edrive40_windows
+          entity: binary_sensor.x5_xdrive50e_windows
           style:
             top: 9%
             left: 84%
         - type: state-label
-          entity: binary_sensor.i4_edrive40_windows
+          entity: binary_sensor.x5_xdrive50e_windows
           style:
             top: 18%
             left: 84%
         - type: state-icon
-          entity: sensor.i4_edrive40_remaining_battery_percent
+          entity: sensor.x5_xdrive50e_remaining_battery_percent
           style:
             top: 84%
             left: 16%
         - type: state-label
-          entity: sensor.i4_edrive40_remaining_battery_percent
+          entity: sensor.x5_xdrive50e_remaining_battery_percent
           style:
             top: 93%
             left: 16%
         - type: state-icon
-          entity: sensor.i4_edrive40_remaining_range_total
+          entity: sensor.x5_xdrive50e_remaining_range_total
           state_color: true
           style:
             top: 84%
             left: 38%
         - type: state-label
-          entity: sensor.i4_edrive40_remaining_range_total
+          entity: sensor.x5_xdrive50e_remaining_range_total
           style:
             top: 93%
             left: 38%
         - type: state-icon
-          entity: sensor.i4_edrive40_mileage
+          entity: sensor.x5_xdrive50e_mileage
           state_color: true
           style:
             top: 84%
             left: 62%
         - type: state-label
-          entity: sensor.i4_edrive40_mileage
+          entity: sensor.x5_xdrive50e_mileage
           style:
             top: 93%
             left: 62%
         - type: state-icon
-          entity: switch.i4_edrive40_climate
+          entity: switch.x5_xdrive50e_climate
           state_color: true
           style:
             top: 84%
             left: 84%
         - type: state-label
-          entity: switch.i4_edrive40_climate
+          entity: switch.x5_xdrive50e_climate
           style:
             top: 93%
             left: 84%
   - type: conditional
     conditions:
-      - entity: binary_sensor.i4_edrive40_connection_status
+      - entity: binary_sensor.x5_xdrive50e_connection_status
         state: 'on'
     card:
       type: picture-elements
-      image: /local/images/bmw-i4-sideview-white.png
+      image: /local/images/2022-BMW-X5-color-Tanzanite-Blue-II.png
       card_mod:
         style:
           hui-image$: |
@@ -116,58 +116,58 @@ cards:
             }
       elements:
         - type: state-icon
-          entity: sensor.i4_edrive40_charging_target
+          entity: sensor.x5_xdrive50e_charging_target
           state_color: false
           style:
             top: 9%
             left: 16%
         - type: state-label
-          entity: sensor.i4_edrive40_charging_target
+          entity: sensor.x5_xdrive50e_charging_target
           suffix: ' target'
           style:
             top: 18%
             left: 16%
+        # - type: state-icon
+        #   entity: sensor.i4_edrive40_charging_time_elapsed
+        #   style:
+        #     top: 9%
+        #     left: 38%
+        # - type: state-label
+        #   entity: sensor.i4_edrive40_charging_time_elapsed_formatted
+        #   suffix: ' ago'
+        #   style:
+        #     top: 18%
+        #     left: 38%
         - type: state-icon
-          entity: sensor.i4_edrive40_charging_time_elapsed
-          style:
-            top: 9%
-            left: 38%
-        - type: state-label
-          entity: sensor.i4_edrive40_charging_time_elapsed_formatted
-          suffix: ' ago'
-          style:
-            top: 18%
-            left: 38%
-        - type: state-icon
-          entity: sensor.i4_edrive40_charging_end_time
+          entity: sensor.x5_xdrive50e_charging_end_time
           icon: mdi:clock-end
           style:
             top: 9%
             left: 62%
-        - type: state-label
-          entity: sensor.i4_edrive40_charging_time_remaining_formatted
-          suffix: ' left'
-          style:
-            top: 18%
-            left: 62%
+        # - type: state-label
+        #   entity: sensor.i4_edrive40_charging_time_remaining_formatted
+        #   suffix: ' left'
+        #   style:
+        #     top: 18%
+        #     left: 62%
         - type: conditional
           conditions:
-            - entity: binary_sensor.i4_edrive40_charging_status
+            - entity: binary_sensor.x5_xdrive50e_charging_status
               state: 'off'
           elements:
             - type: state-icon
-              entity: sensor.i4_edrive40_remaining_battery_percent
+              entity: sensor.x5_xdrive50e_remaining_battery_percent
               state_color: true
               style:
                 top: 9%
                 left: 84%
         - type: conditional
           conditions:
-            - entity: binary_sensor.i4_edrive40_charging_status
+            - entity: binary_sensor.x5_xdrive50e_charging_status
               state: 'on'
           elements:
             - type: state-icon
-              entity: sensor.i4_edrive40_remaining_battery_percent
+              entity: sensor.x5_xdrive50e_remaining_battery_percent
               icon: mdi:battery-charging
               style:
                 top: 9%
@@ -201,50 +201,50 @@ cards:
                   }
                 }
         - type: state-label
-          entity: sensor.i4_edrive40_remaining_battery_percent
+          entity: sensor.x5_xdrive50e_remaining_battery_percent
           style:
             top: 18%
             left: 84%
         - type: state-icon
-          entity: select.i4_edrive40_ac_charging_limit
+          entity: sensor.x5_xdrive50e_ac_current_limit
           style:
             top: 84%
             left: 16%
         - type: state-label
-          entity: select.i4_edrive40_ac_charging_limit
+          entity: sensor.x5_xdrive50e_ac_current_limit
           style:
             top: 93%
             left: 16%
         - type: state-icon
-          entity: sensor.i4_edrive40_remaining_range_total
+          entity: sensor.x5_xdrive50e_remaining_range_total
           state_color: true
           style:
             top: 84%
             left: 38%
         - type: state-label
-          entity: sensor.i4_edrive40_remaining_range_total
+          entity: sensor.x5_xdrive50e_remaining_range_total
           style:
             top: 93%
             left: 38%
         - type: state-icon
-          entity: binary_sensor.i4_edrive40_door_lock_state
+          entity: binary_sensor.x5_xdrive50e_door_lock_state
           state_color: true
           style:
             top: 84%
             left: 62%
         - type: state-label
-          entity: binary_sensor.i4_edrive40_door_lock_state
+          entity: binary_sensor.x5_xdrive50e_door_lock_state
           style:
             top: 93%
             left: 62%
         - type: state-icon
-          entity: switch.i4_edrive40_climate
+          entity: switch.x5_xdrive50e_climate
           state_color: true
           style:
             top: 84%
             left: 84%
         - type: state-label
-          entity: switch.i4_edrive40_climate
+          entity: switch.x5_xdrive50e_climate
           style:
             top: 93%
             left: 84%
