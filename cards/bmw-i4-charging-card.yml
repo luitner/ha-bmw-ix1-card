@@ -2,11 +2,12 @@ type: vertical-stack
 cards:
   - type: conditional
     conditions:
-      - entity: binary_sensor.x5_xdrive50e_connection_status
+      - condition: state
+        entity: binary_sensor.x5_xdrive50e_charging_status
         state_not: 'on'
     card:
       type: picture-elements
-      image: /local/images/2022-BMW-X5-color-Tanzanite-Blue-II.png
+      image: /local/2022-BMW-X5-color-Tanzanite-Blue-II.png
       card_mod:
         style:
           hui-image$: |
@@ -102,11 +103,12 @@ cards:
             left: 84%
   - type: conditional
     conditions:
-      - entity: binary_sensor.x5_xdrive50e_connection_status
+      - condition: state
+        entity: binary_sensor.x5_xdrive50e_charging_status
         state: 'on'
     card:
       type: picture-elements
-      image: /local/images/2022-BMW-X5-color-Tanzanite-Blue-II.png
+      image: /local/2022-BMW-X5-color-Tanzanite-Blue-II.png
       card_mod:
         style:
           hui-image$: |
@@ -128,12 +130,12 @@ cards:
             top: 18%
             left: 16%
         - type: state-icon
-          entity: sensor.i4_edrive40_charging_time_elapsed
+          entity: sensor.charging_time_elapsed_x5_50e
           style:
             top: 9%
             left: 38%
         - type: state-label
-          entity: sensor.i4_edrive40_charging_time_elapsed_formatted
+          entity: sensor.charging_time_elapsed_x5_50e_formatted
           suffix: ' ago'
           style:
             top: 18%
@@ -145,7 +147,7 @@ cards:
             top: 9%
             left: 62%
         - type: state-label
-          entity: sensor.i4_edrive40_charging_time_remaining_formatted
+          entity: sensor.charging_time_remaining_x5_50e_formatted
           suffix: ' left'
           style:
             top: 18%
@@ -216,35 +218,35 @@ cards:
             top: 93%
             left: 16%
         - type: state-icon
-          entity: sensor.x5_xdrive50e_remaining_range_total
+          entity: sensor.x5_xdrive50e_remaining_range_electric
           state_color: true
           style:
             top: 84%
             left: 38%
         - type: state-label
-          entity: sensor.x5_xdrive50e_remaining_range_total
+          entity: sensor.x5_xdrive50e_remaining_range_electric
           style:
             top: 93%
             left: 38%
         - type: state-icon
-          entity: binary_sensor.x5_xdrive50e_door_lock_state
+          entity: sensor.car_charger_socket_total_power
           state_color: true
           style:
             top: 84%
             left: 62%
         - type: state-label
-          entity: binary_sensor.x5_xdrive50e_door_lock_state
+          entity: sensor.car_charger_socket_total_power
           style:
             top: 93%
             left: 62%
         - type: state-icon
-          entity: switch.x5_xdrive50e_climate
+          entity: binary_sensor.x5_xdrive50e_door_lock_state
           state_color: true
           style:
             top: 84%
             left: 84%
         - type: state-label
-          entity: switch.x5_xdrive50e_climate
+          entity: binary_sensor.x5_xdrive50e_door_lock_state
           style:
             top: 93%
             left: 84%
