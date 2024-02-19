@@ -1,8 +1,8 @@
-# Home Assistant bmw i4 card
+# Home Assistant bmw x5 PHEV card
 
 The [Home Assistant BMW Connected Drive](https://www.home-assistant.io/integrations/bmw_connected_drive/) integration can be used to extract data from the car. That will give you about 30 integration entries (entities) in your Home Assistant, but it does not come with any visualization.
 
-These are some Home Assistant dashboard cards that can display the BMW i4 information.
+These are some Home Assistant dashboard cards that can display the BMW X5 information.
 
 ## charging card
 
