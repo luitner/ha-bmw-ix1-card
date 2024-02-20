@@ -4,11 +4,17 @@ The [Home Assistant BMW Connected Drive](https://www.home-assistant.io/integrati
 
 These are some Home Assistant dashboard cards that can display the BMW X5 information.
 
+This repo is a fork of the https://github.com/filipmaelbrancke/ha-bmw-i4-card (thank you!!) modified for the PHEV X5 with a few added capabilities and refactored sensors/templates.
+
 ## charging card
 
 Charging cable connected and charging under way:
 
 ![Charging card](cards/images/example/charging-card.gif)
+
+Charging cable connected - battery full:
+
+![Charging card](cards/images/example/charging-card.png)
 
 No charging cable connected:
 
@@ -28,8 +34,10 @@ Car information that can be visualised:
 	- Plugged In | Unplugged | Charging
 	- Charging status
 	- Charging time elapsed | remaining
+	- Charging power - external 3 phase power/energy meter required
 - Vehicle state
-	- Remaining range
+	- Remaining total range
+ 	- Electric range
 	- Mileage
 	- Locked | Unlocked
 	- Door/Window Overview
@@ -40,10 +48,10 @@ Car information that can be visualised:
 # Installation
 
 
-
 1. Requires [Home Assistant BMW Connected Drive](https://www.home-assistant.io/integrations/bmw_connected_drive/), and some [extra Home Assistant components](#necessary-home-assistant-components) if not yet available.
 2. Add the extra sensors (see `sensors.yml`)
-3. Copy the contents of `bmw-x5-charging-card.yml` or `bmw-x5-minimal-card.yml` into a lovelace card.
+3. Add the extra charger power sensor - if you plan to use the charging power capability
+4. Copy the contents of `bmw-x5-charging-card.yml` or `bmw-x5-minimal-card.yml` into a lovelace card.
 4. Modify the entity names based on your setup.
 
 ## Necessary Home Assistant components
@@ -79,10 +87,3 @@ _______________________________________________________________________
 - [Bimmer Connected](https://bimmer-connected.readthedocs.io/en/latest/index.html)
 - [Traffic interception Flutter apps](https://blog.nviso.eu/2022/08/18/intercept-flutter-traffic-on-ios-and-android-http-https-dio-pinning/)
 
-## Home Assistant dashboards - inspiration - credits
-
-
-
-other:
-
-- https://blog.sanghviharshit.com/home-assistant-dashboard-tesla/
