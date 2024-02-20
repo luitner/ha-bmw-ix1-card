@@ -6,15 +6,17 @@ These are some Home Assistant dashboard cards that can display the BMW X5 inform
 
 ## charging card
 
-Charging cable connected:
+Charging cable connected and charging under way:
 
-![Charging card](cards/images/example/charging-card.png)
+![Charging card](cards/images/example/charging-card.gif)
 
 No charging cable connected:
 
 ![Charging card](cards/images/example/non-charging-card.png)
 
 ## minimal card
+
+Card variant with electric range only:
 
 ![Minimal card](cards/images/example/minimal-card.png)
 
